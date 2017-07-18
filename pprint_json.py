@@ -1,13 +1,13 @@
 import json
+import os
 from pprint import pprint
 
 
-def load_data(filepath):
-    f = open(filepath, 'r', encoding='UTF-8')
-    json_data = f.read()
-    f.close()
-    data = json.loads(json_data)
-    return data
+def load_json_data(filepath):
+    if not os.path.exists(filepath):
+        return None
+    with open(filepath, 'r', encoding='UTF-8') as file_handler:
+        return json.load(file_handler)
 
 
 def pretty_print_json(data):
@@ -16,6 +16,6 @@ def pretty_print_json(data):
 
 if __name__ == '__main__':
     file_path = input("ВВедите имя файла: ")
-    json_data = load_data(file_path)
-    pretty_print_json(json_data)
-
+    json_content = load_json_data(file_path)
+    if json_content:
+        pretty_print_json(json_content)

@@ -4,9 +4,9 @@
 
 # Quickstart
 
-pprint_json.py содержит функции load_data(filepath), pretty_print_json(data).
+pprint_json.py содержит функции load_json_data(filepath), pretty_print_json(data).
 
-Функция load_data(filepath), принимает путь к файлу. Возвращает данные
+Функция load_json_data(filepath), принимает путь к файлу. Возвращает данные
 
 Функция pretty_print_json(data), принимает строку данных и выводи их в консоль в удбном для чтения виде.
 
