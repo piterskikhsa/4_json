@@ -1,10 +1,14 @@
 # Prettify JSON
 
-[TODO. There will be project description]
+Скрипт читает данные из файла(в формате json) и выводит в консоль, в удбном для чтения виде.
 
 # Quickstart
 
-[TODO]
+pprint_json.py содержит функции load_data(filepath), pretty_print_json(data).
+
+Функция load_data(filepath), принимает путь к файлу. Возвращает данные
+
+Функция pretty_print_json(data), принимает строку данных и выводи их в консоль в удбном для чтения виде.
 
 Example of script launch on Linux, Python 3.5:
 
