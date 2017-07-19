@@ -1,6 +1,6 @@
 import json
 import os
-from pprint import pprint
+
 
 
 def load_json_data(filepath):
@@ -11,7 +11,7 @@ def load_json_data(filepath):
 
 
 def pretty_print_json(data):
-    pprint(data)
+    print(json.dumps(data, sort_keys=True, indent=4, ensure_ascii=False))
 
 
 if __name__ == '__main__':
@@ -19,3 +19,5 @@ if __name__ == '__main__':
     json_content = load_json_data(file_path)
     if json_content:
         pretty_print_json(json_content)
+    else:
+        print('Данные не загружены, повторите попытку!')
